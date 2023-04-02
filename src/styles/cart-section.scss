@@ -94,12 +94,13 @@
     }
 
     &-remove {
-        //padding-left: 42px;
         img  {
             height: 59px;
             width: 59px;
             padding-left: 42px;
             border-left:1px dashed rgba(63, 78, 101, .1);
+
+            cursor: pointer;
         }
     }
 }

@@ -110,6 +110,10 @@ const Header: FC = () => {
                             <span>Корзина</span>
                             <span>{Number(cartAmount).toFixed(2)} ₽</span>
                         </div>
+                    </Link>
+                    <Link to='/admin' className='admin-link link-plain'>
+                        <span>Режим</span>
+                        <span>админа</span>
                     </Link>              
                 </nav>
             </div>

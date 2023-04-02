@@ -283,6 +283,26 @@
     }
 }
 
+.admin-link {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding: 5px;
+
+    
+
+    background-color: lightblue;
+    border-radius: 10px;
+
+    span {
+        font-weight: 700;
+        font-size: 18px;
+        color: $cello;
+    }
+
+
+}
+
 
 @media (max-width: 1919px) {
     .col {
@@ -330,6 +350,10 @@
         &-field {
             width: min-content;
         }
+    }
+
+    .admin-link {
+        display: none;
     }
 
 
