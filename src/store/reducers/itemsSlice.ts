@@ -16,7 +16,7 @@ interface IItemsState {
 }
 
 const initialState: IItemsState = {
-    items: [],
+    items: defaultItems,
     filteredItems: [],
     typesOfCare: [
         { type: 'Уход за телом', identifier: 'body-care' },
