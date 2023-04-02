@@ -17,7 +17,7 @@ const HeaderAndFooter = () => (
 )
 
 export const AppRouter = () => (
-    <BrowserRouter>
+    <BrowserRouter basename="/sultan-shop" >
         <Routes>
             <Route element={<HeaderAndFooter/>}>
                 <Route
