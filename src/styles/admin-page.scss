@@ -1,0 +1,75 @@
+.admin {
+    margin: 50px 50px;
+
+    &-header {
+        margin-left: 200px;
+
+        h1 {
+            text-align: center;
+        }
+
+    }
+    &-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 15px;
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+    }
+}
+
+.card {
+    &-remove {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    &-edit {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    &-add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: lightblue;
+    }
+    &-add.empty {
+        height: 490px;
+        width: 326px;
+    }
+}
+
+.btn {
+    &-to-main {
+        margin-top: 35px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+
+        span {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 150%;
+
+            color: $cello;
+        }
+    }
+}
+
+.relative {
+    position: relative;
+}

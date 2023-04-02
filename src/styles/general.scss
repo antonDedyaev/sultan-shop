@@ -1,0 +1,273 @@
+@font-face {
+    font-weight: 300;
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-Light.ttf");
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-weight: 800;
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-ExtraBold.ttf");
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Inter', sans-serif;
+    color: $black;
+    background: $white;
+
+}
+
+hr {
+    margin: 0;
+
+    background: $cello;
+    opacity: 0.2;
+}
+
+.container {
+    display: flex;
+    // justify-content: center;
+    margin: 0 277px;
+
+
+}
+
+
+
+.header {
+    &-text {
+        margin-top: 50px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: 40px;
+        line-height: 120%
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $white;
+    background: $orange;
+
+    border: none;
+    border-radius: 80px;
+
+    cursor: pointer;
+
+    p {
+        font: 700 14px/17px 'Inter', sans-serif;
+    }
+
+    
+    &-add-amount,
+    &-subtract-amount {
+        cursor: pointer;
+    }
+}
+
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+
+.list {
+    &-unmarked {
+        list-style: none;
+    }
+
+    &-item {
+        margin-bottom: 20px;
+    }
+}
+
+.link {
+    &-plain {
+        text-decoration: none;
+    }
+}
+
+.breadcrumbs {
+    &-nav {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        &-wrapper {
+            display: flex;
+            margin-top: 45px;
+
+            width: 100%;
+        }
+
+        .active {
+            opacity: 0.5;
+        }
+
+
+        &-link {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-right: 1px dashed rgba(63, 78, 101, .1);
+            font: 300 14px/120% "Inter", sans-serif;
+            color: $cello;
+        }
+
+        &-link:first-child {
+            padding-left: 0;
+        }
+
+        &-link:last-child {
+            padding-right: 0;
+            border: none;
+        }
+    }
+    &-mobile {
+        display: none;
+    }
+}
+
+.quantity {
+    &-control {
+        button {
+            padding: 4px 12px;
+            width: 34px;
+
+            background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+            border: none;
+            border-radius: 1000px;
+
+            color: $cello;
+        }
+
+        span {
+            margin-left: 17px;
+            margin-right: 21px;
+
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 130%;
+
+        }
+    }
+}
+
+.item {
+    &-price {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 130%;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 68px;
+
+    &-list {
+        display: flex;
+        gap: 21px;
+    }
+}
+
+.page {
+    &-link {
+        cursor: pointer;
+    }
+    &-prev {
+        margin-right: 35px;
+        padding-top: 3px;
+    }
+    &-next {
+        margin-left: 35px;
+        padding-top: 3px;    
+    }
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-item ~ .active {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+        border-radius: 1000px;
+    }
+}
+
+@media (max-width: 1919px) {
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 50px;
+
+
+    }
+}
+
+@media (max-width: 649px) {
+    .container {
+        margin: 0 15px;
+
+    }
+
+    .btn {
+        // p, img {
+        //     font: 600 12px/15px 'Inter', sans-serif !important;
+        //     color: $cello !important;
+        // }
+    }
+
+    .breadcrumbs {
+        &-mobile {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-weight: 600;
+                font-size: 10px;
+                line-height: 120%;
+            
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+            
+                color: #3F4E65;
+            }
+        }
+        &-nav {
+            display: none;
+
+            &-wrapper {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+    

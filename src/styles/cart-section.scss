@@ -1,0 +1,226 @@
+.cart {
+    &-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    &-header {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &-items {
+        &-wrapper {
+            margin: 50px 0;
+            width: 100%;
+        }
+    }
+
+    &-item {
+
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 50px 0;
+
+        border-top: 1px dashed rgba(63, 78, 101, .1);
+        border-bottom: 1px dashed rgba(63, 78, 101, .1);
+
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            padding: 0 44px;
+            height: 49px;
+            border-left: 1px dashed rgba(63, 78, 101, .1);
+            border-right: 1px dashed rgba(63, 78, 101, .1);
+        }
+
+        .item-price {
+            padding: 0 44px;
+            //border-right: 1px dashed rgba(63, 78, 101, .1);
+            white-space: nowrap;
+        }
+
+    }
+}
+
+.item {
+    &-image {
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+        min-width: 281px;
+
+        //max-height: 191px;
+
+        img {
+            height: 191px;
+            width: auto;
+        }
+    }
+    &-main {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        //margin-right: 85px;
+        
+
+        min-width: 480px;
+
+        .item-weight {
+            gap: 8px;
+        }
+
+        h2 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            color: $black;
+        }
+
+        p {
+            padding-right: 35px;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 150%;
+
+            color: $cello;
+        }
+
+    }
+
+    &-remove {
+        //padding-left: 42px;
+        img  {
+            height: 59px;
+            width: 59px;
+            padding-left: 42px;
+            border-left:1px dashed rgba(63, 78, 101, .1);
+        }
+    }
+}
+
+.order {
+    &-process {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+
+        margin-bottom: 100px;
+
+        .btn {
+            height: 59px;
+            width: 192px;
+        }
+    }
+}
+
+@media (max-width: 1459px) {
+    .cart {
+        &-item {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media (max-width: 649px) {
+    .cart {
+        &-items {
+            &-wrapper {
+                margin: 20px 0 25px 0;
+            }
+        }
+
+        &-item {
+            justify-content: center;
+            padding: 20px 0 25px 0;
+
+            .quantity-control {
+                padding: 0 10px 0 0;
+                border-left: none;
+                border-right: 1px dashed rgba(63, 78, 101, .1);
+            }
+
+            .item-price {
+                padding: 0 10px;
+                font-size: 16px;
+                line-height: 130%;
+                white-space: nowrap;
+            }
+        }
+
+    }
+
+    .item {
+        &-image {
+            margin-bottom: 10px;
+        }
+
+        &-main {
+            min-width: inherit;
+
+            .item-weight {
+                margin-bottom: 0;
+
+            }
+
+            h2 {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            p {
+                margin: 0 0 20px 0;
+                padding: 0;
+            }
+        }
+
+        
+
+        &-remove {
+            padding-left: 0;
+            img {
+                height: 54px;
+                width: 54px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .order {
+        &-process {
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            gap: 25px;
+
+            margin-bottom: 50px;
+
+        }
+    }
+
+    .sum {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .btn-process {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 369px) {
+    .quantity-control span {
+        margin: 0 15px;
+
+    }
+}
+
+
+

@@ -1,0 +1,79 @@
+.card {
+    &-edit {
+        &-page {
+            display: flex;
+            flex-direction: column;
+            margin: 120px;
+
+            .admin-header {
+                margin-left: 0;
+            }
+        }
+
+    }
+    &-form {
+        &-inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 9px;
+
+            input, select {
+                width: 400px;
+                box-sizing: border-box;
+                padding-left: 10px;
+
+                font-size: 18px;
+            
+                border-radius: 5px;
+                border: none ;
+                background: $gray;
+            }
+        }
+
+        &-labels {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 12px;
+
+            font: 700 20px/100% 'Inter', sans-serif;
+            
+            color: $cello;
+        }
+    }
+
+    &-data {
+        display: flex;
+        gap: 15px;
+    }
+}
+
+#card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    width: fit-content;
+    height: auto;
+    border: 2px dashed $green;
+    border-radius: 5%;
+
+    
+}
+
+.btn {
+    &-save {
+        width: 130px;
+        margin-top: 15px;
+        //margin-left: 15px;
+        padding: 15px 25px;
+
+        text-align: center;
+
+        box-sizing: border-box;
+        background-color: $green;
+        border-radius: 15px;
+        border: none;
+    }
+}
