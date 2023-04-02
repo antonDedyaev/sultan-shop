@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sultan-shop/static/css/main.3c6e2d4a.css",
-    "main.js": "/sultan-shop/static/js/main.11f8c8b7.js",
+    "main.js": "/sultan-shop/static/js/main.abba0eeb.js",
     "static/media/Inter-ExtraBold.ttf": "/sultan-shop/static/media/Inter-ExtraBold.e4a4cb7133001f282a15.ttf",
     "static/media/Inter-Bold.ttf": "/sultan-shop/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
     "static/media/Inter-Medium.ttf": "/sultan-shop/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
@@ -22,8 +22,8 @@
     "static/media/box.svg": "/sultan-shop/static/media/box.07fd134522fb3fcf6585c16e00793281.svg",
     "static/media/telegram.svg": "/sultan-shop/static/media/telegram.0d9f5fd9225d544eb5d5ec42cc337a6a.svg",
     "static/media/phone-sales.svg": "/sultan-shop/static/media/phone-sales.d6f82783198a07c85fbb207222e7db17.svg",
-    "index.html": "/sultan-shop/index.html",
     "static/media/add-plus-square-svgrepo-com.svg": "/sultan-shop/static/media/add-plus-square-svgrepo-com.4be8bfde60275c1254673aad46a7c59a.svg",
+    "index.html": "/sultan-shop/index.html",
     "static/media/nav-icon.svg": "/sultan-shop/static/media/nav-icon.d148b8d8689c3530f152b2dfc5c6dcb9.svg",
     "static/media/back-buttons-multimedia-svgrepo-com.svg": "/sultan-shop/static/media/back-buttons-multimedia-svgrepo-com.1570e0fa87addb5637634939c6cba129.svg",
     "static/media/magnifying-glass.svg": "/sultan-shop/static/media/magnifying-glass.8ccdf0814cd4cac3b494.svg",
@@ -45,10 +45,10 @@
     "static/media/arrow-left-cello.svg": "/sultan-shop/static/media/arrow-left-cello.5a3ebbf524233ddda3e33d65833a2922.svg",
     "static/media/big-arrow-down.svg": "/sultan-shop/static/media/big-arrow-down.90a0847e2609fe35eb180fd09df108b9.svg",
     "main.3c6e2d4a.css.map": "/sultan-shop/static/css/main.3c6e2d4a.css.map",
-    "main.11f8c8b7.js.map": "/sultan-shop/static/js/main.11f8c8b7.js.map"
+    "main.abba0eeb.js.map": "/sultan-shop/static/js/main.abba0eeb.js.map"
   },
   "entrypoints": [
     "static/css/main.3c6e2d4a.css",
-    "static/js/main.11f8c8b7.js"
+    "static/js/main.abba0eeb.js"
   ]
 }
