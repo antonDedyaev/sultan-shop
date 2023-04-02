@@ -77,3 +77,23 @@
         border: none;
     }
 }
+
+@media (max-width: 769px) {
+    .card {
+
+        &-edit {
+            &-page {
+                margin: 60px;
+            }
+        }
+        &-form {
+            &-inputs {
+                input,
+                select {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+}
