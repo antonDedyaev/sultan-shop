@@ -17,7 +17,7 @@ const HeaderAndFooter = () => (
 )
 
 export const AppRouter = () => (
-    <HashRouter >
+    <BrowserRouter basename='/sultan-shop'>
         <Routes>
             <Route element={<HeaderAndFooter/>}>
                 <Route
@@ -42,5 +42,5 @@ export const AppRouter = () => (
                 element={<AdminEditCard />}
             />
         </Routes>
-    </HashRouter>
+    </BrowserRouter>
 )

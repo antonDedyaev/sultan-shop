@@ -1,4 +1,4 @@
-// const items = [
+// const defaultItems = [
 //     {
 //         id: 1,
 //         image: "https://cdn.metro-cc.ru/ru/ru_pim_47389001003_01.png?maxwidth=460&maxheight=460&format=jpg&quality=90",
