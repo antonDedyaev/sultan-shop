@@ -1,0 +1,226 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Regular.ttf");
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Bold.ttf");
+}
+body {
+  margin: 0;
+  width: 1920px;
+  background: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
+
+hr {
+  margin: 0;
+  background: #3F4E65;
+  opacity: 0.2;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 277px;
+}
+
+.btn {
+  color: #FFFFFF;
+  background: #FFC85E;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+}
+
+.header-nav-top {
+  height: 60px;
+  width: 100%;
+}
+.header-nav-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 108px;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  justify-content: space-between;
+}
+.col-left {
+  display: flex;
+  flex-direction: row;
+}
+.col-left p {
+  padding-right: 20px;
+  font: 600 14px/130% "Inter", sans-serif;
+  color: #111111;
+  border-right: 1px dashed rgba(63, 78, 101, 0.1);
+}
+.col-left p:last-child {
+  border-right: none;
+}
+.col-left span {
+  font: 300 12px/130% "Inter", sans-serif;
+  color: #3F4E65;
+}
+.col-left img {
+  margin-right: 18px;
+}
+.col-right {
+  display: flex;
+  list-style: none;
+}
+.col-right li {
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font: 400 14px/150% "Inter", sans-serif;
+  color: #3F4E65;
+  border-right: 1px dashed rgba(63, 78, 101, 0.1);
+}
+.col-right li:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+.col-right a {
+  text-decoration: none;
+}
+
+.img-navi {
+  margin-right: 18px;
+}
+.img-mail {
+  margin-right: 16px;
+  margin-left: 18px;
+}
+.img-logo {
+  margin-right: 38px;
+}
+
+.btn-catalogue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-right: 15px;
+  height: 59px;
+  width: 192px;
+}
+.btn-catalogue p {
+  font: 700 14px/17px "Inter", sans-serif;
+}
+.btn-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 59px;
+  width: 200px;
+}
+.btn-prices p {
+  font: 700 14px/17px "Inter", sans-serif;
+}
+
+.search {
+  position: relative;
+  margin-right: 35px;
+}
+.search:before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 39px;
+  height: 39px;
+  background-image: url("../assets/img/magnifying-glass.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+}
+.search-field {
+  height: 59px;
+  width: 263px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: none;
+  border-radius: 36px;
+  background: #EDEDED;
+}
+
+.contacts {
+  position: relative;
+  padding-right: 98px;
+}
+.contacts-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  text-align: right;
+  line-height: 150%;
+}
+.contacts-text span:nth-child(1) {
+  font-size: 14px;
+  font-weight: 600;
+}
+.contacts-text span:nth-child(2) {
+  font-size: 12px;
+  font-weight: 300;
+  color: #3F4E65;
+}
+.contacts-text a {
+  font-size: 10px;
+  font-weight: 400;
+  color: #3F4E65;
+}
+.contacts img {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+}
+
+.pricelist {
+  margin-right: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-left: 1px dashed rgba(63, 78, 101, 0.1);
+  border-right: 1px dashed rgba(63, 78, 101, 0.1);
+}
+
+.cart {
+  display: flex;
+  gap: 14px;
+}
+.cart-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart span:nth-child(1) {
+  font: 300 12px/150% "Inter", sans-serif;
+  color: #3F4E65;
+}
+.cart span:nth-child(2) {
+  font: 600 14px/150% "Inter", sans-serif;
+}
+.cart img:nth-child(1) {
+  position: relative;
+}
+.cart img:nth-child(2) {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  top: 32px;
+  right: 78px;
+}
+
+.footer-section {
+  display: flex;
+  height: 500px;
+  background: #3F4E65;
+}
+
+/*# sourceMappingURL=app.css.map */
