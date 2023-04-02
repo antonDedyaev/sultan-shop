@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ISingleItem } from '../../models/ISingleItem';
+import { defaultItems } from '../../utils/database';
 
 interface ICareCategory {
     type: string;
@@ -15,7 +16,7 @@ interface IItemsState {
 }
 
 const initialState: IItemsState = {
-    items: [],
+    items: defaultItems,
     filteredItems: [],
     typesOfCare: [
         { type: 'Уход за телом', identifier: 'body-care' },
