@@ -1,6 +1,6 @@
 import { ICartItem } from '../../models/ICartItem';
 import { ISingleItem } from '../../models/ISingleItem';
-import items from '../../utils/database';
+import database from '../../utils/database.json';
 import { AppDispatch } from '../store';
 import { itemAddedToCart } from './cartSlice';
 import { itemsLoaded, itemsLoadingFailed } from './itemsSlice';
@@ -8,7 +8,7 @@ import { itemsLoaded, itemsLoadingFailed } from './itemsSlice';
 export const loadItems = () => (dispatch: AppDispatch) => {
     try {
         const parsed: ISingleItem[] = JSON.parse(localStorage.getItem('items')!);
-        const storedItems = parsed.length === 0 ? items : parsed;
+        const storedItems = parsed.length === 0 ? database.items : parsed;
         localStorage.setItem('items', JSON.stringify(storedItems)) // *
 
         dispatch(itemsLoaded(storedItems));
