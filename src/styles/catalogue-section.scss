@@ -243,9 +243,15 @@
         line-height: 17px;
 
         color: $cello;
+
+        cursor: pointer;
     }
     // Поправить выравнивание текста!!!
 
+}
+
+.list-el {
+    cursor: pointer;
 }
 
 #price-filter {

@@ -1,4 +1,4 @@
-## Sultan Shop
+# Sultan Shop
 
 This is a React-based Sultan shop SPA.
 You can add search for items, filter and sort them and add them to your shopping cart
