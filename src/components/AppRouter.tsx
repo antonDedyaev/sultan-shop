@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
 import AdminEditCard from './admin/AdminEditCard';
 import AdminList from './admin/AdminList';
 import CartPage from './CartPage';
@@ -17,7 +17,7 @@ const HeaderAndFooter = () => (
 )
 
 export const AppRouter = () => (
-    <BrowserRouter basename="/sultan-shop" >
+    <HashRouter >
         <Routes>
             <Route element={<HeaderAndFooter/>}>
                 <Route
@@ -42,5 +42,5 @@ export const AppRouter = () => (
                 element={<AdminEditCard />}
             />
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
 )
