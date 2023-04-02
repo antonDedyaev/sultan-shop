@@ -17,7 +17,7 @@ const HeaderAndFooter = () => (
 )
 
 export const AppRouter = () => (
-    <BrowserRouter >
+    <HashRouter >
         <Routes>
             <Route element={<HeaderAndFooter/>}>
                 <Route
@@ -42,5 +42,5 @@ export const AppRouter = () => (
                 element={<AdminEditCard />}
             />
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
 )
