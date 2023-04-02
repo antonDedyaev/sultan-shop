@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ISingleItem } from '../../models/ISingleItem';
 import { defaultItems } from '../../utils/database';
-import database from '../../utils/items.json';
+import database from '../../utils/database.json';
 
 interface ICareCategory {
     type: string;
