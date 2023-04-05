@@ -1,7 +1,7 @@
 # Sultan Shop
 
 This is a React-based Sultan shop SPA.
-You can add search for items, filter and sort them and add them to your shopping cart
+You can search for items, filter or sort them and add them to your shopping cart.
 There is an admin mode (activated via small button placed on the top right corner of the page) to edit items info, add new items or delete them.
 
 ## Check the deployed app at:
