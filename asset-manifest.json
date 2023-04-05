@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sultan-shop/static/css/main.8bff2467.css",
-    "main.js": "/sultan-shop/static/js/main.47493cf0.js",
+    "main.css": "/sultan-shop/static/css/main.7e56fc4f.css",
+    "main.js": "/sultan-shop/static/js/main.8a4dcaa2.js",
     "static/media/Inter-ExtraBold.ttf": "/sultan-shop/static/media/Inter-ExtraBold.e4a4cb7133001f282a15.ttf",
     "static/media/Inter-Bold.ttf": "/sultan-shop/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
     "static/media/Inter-Medium.ttf": "/sultan-shop/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
@@ -13,6 +13,7 @@
     "static/media/add-to-cart.svg": "/sultan-shop/static/media/add-to-cart.38d6d6b8821988191585d29c7f410a8d.svg",
     "static/media/cart.svg": "/sultan-shop/static/media/cart.e6b2771034d819fa92941de5f3ef4166.svg",
     "static/media/waste-bin.svg": "/sultan-shop/static/media/waste-bin.9a8622158eebb6cebb7a8a49ebaa6629.svg",
+    "static/media/waste-bin_.svg": "/sultan-shop/static/media/waste-bin_.52dd0ca00a7578f6d0c562e69a5e8080.svg",
     "static/media/share.svg": "/sultan-shop/static/media/share.c7ea557134a8977c1abbf2213e507dea.svg",
     "static/media/close-btn.svg": "/sultan-shop/static/media/close-btn.89b5267c6ed8636e6746a8d636ed5855.svg",
     "static/media/edit-svgrepo-com.svg": "/sultan-shop/static/media/edit-svgrepo-com.02ba38a9ceb431aa00bb10334442f9d8.svg",
@@ -44,11 +45,11 @@
     "static/media/hr-line.svg": "/sultan-shop/static/media/hr-line.17e9c6d3e81be1197130.svg",
     "static/media/arrow-left-cello.svg": "/sultan-shop/static/media/arrow-left-cello.5a3ebbf524233ddda3e33d65833a2922.svg",
     "static/media/big-arrow-down.svg": "/sultan-shop/static/media/big-arrow-down.90a0847e2609fe35eb180fd09df108b9.svg",
-    "main.8bff2467.css.map": "/sultan-shop/static/css/main.8bff2467.css.map",
-    "main.47493cf0.js.map": "/sultan-shop/static/js/main.47493cf0.js.map"
+    "main.7e56fc4f.css.map": "/sultan-shop/static/css/main.7e56fc4f.css.map",
+    "main.8a4dcaa2.js.map": "/sultan-shop/static/js/main.8a4dcaa2.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bff2467.css",
-    "static/js/main.47493cf0.js"
+    "static/css/main.7e56fc4f.css",
+    "static/js/main.8a4dcaa2.js"
   ]
 }
