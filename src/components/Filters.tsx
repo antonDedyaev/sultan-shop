@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react';
-import wasteBin from '../assets/img/waste-bin.svg';
+import wasteBin from '../assets/img/waste-bin_.svg';
 import arrowDown from '../assets/img/big-arrow-down.svg';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import { ISingleItem } from '../models/ISingleItem';
 import { itemsFiltered } from '../store/reducers/itemsSlice';
+import { filterByCategory } from '../store/reducers/ActionCreators';
 
 const Filters: FC = () => {
   const dispatch = useAppDispatch();
@@ -30,8 +31,6 @@ const Filters: FC = () => {
   useEffect(() => {
     dispatch(itemsFiltered(showFiltered));
   }, [showFiltered]);
-
-  //const iterated = filteredItems.length === 0 ? items : filteredItems;
 
   const handlePriceFilter = () => {
     const priceIterated =
@@ -103,26 +102,6 @@ const Filters: FC = () => {
 
   const careCategories = useAppSelector((state) => state.items.typesOfCare);
 
-  const handleCategoryFilter = (
-    { currentTarget }: React.MouseEvent<HTMLDivElement>,
-    itemsToFilter: ISingleItem[],
-  ) => {
-    const id = currentTarget.dataset.id;
-    const matched = document.querySelectorAll(`div[data-id=${id}]`);
-    matched.forEach((item) => item.classList.toggle('activated'));
-    const activeCareTypes = document.querySelectorAll('.activated');
-    const uniqueCareTypes = new Set();
-    activeCareTypes.forEach((type) => uniqueCareTypes.add(type.textContent));
-    const filtered = itemsToFilter.filter(
-      (item) =>
-        item.care &&
-        [...uniqueCareTypes].length !== 0 &&
-        item.care.includes([...uniqueCareTypes].join('/')),
-    );
-    console.log('categoryFilter:', filtered);
-    dispatch(itemsFiltered(filtered));
-  };
-
   const renderLeftFilter = () => {
     return (
       <div className="filter-left-list">
@@ -132,7 +111,7 @@ const Filters: FC = () => {
             className="list-el"
             key={index}
             data-id={category.identifier}
-            onClick={(e) => handleCategoryFilter(e, items)}
+            onClick={(e) => filterByCategory(e, items, dispatch)}
           >
             {category.type}
           </div>
@@ -239,7 +218,7 @@ const Filters: FC = () => {
             >
               <p>Показать</p>
             </div>
-            <div onClick={handleRemoveFilters}>
+            <div className="filter-remove" onClick={handleRemoveFilters}>
               <img src={wasteBin} alt="Мусорная корзина" />
             </div>
           </div>

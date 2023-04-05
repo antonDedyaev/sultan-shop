@@ -8,7 +8,7 @@ import downloadIcon from '../assets/img/download-dark.svg';
 import arrowLeft from '../assets/img/arrow-left-cello.svg';
 import horizontalLine from '../assets/img/line.svg';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
-import { loadItems, onAddToCartClick } from '../store/reducers/ActionCreators';
+import { loadItems, handleAddToCart } from '../store/reducers/ActionCreators';
 import { Link } from 'react-router-dom';
 
 const ItemPage: FC = () => {
@@ -130,7 +130,7 @@ const ItemPage: FC = () => {
                   <div
                     className="btn btn-cart"
                     onClick={() =>
-                      onAddToCartClick(selectedItem, dispatch, itemCount)
+                      handleAddToCart(selectedItem, dispatch, itemCount)
                     }
                   >
                     <p>В корзину</p>

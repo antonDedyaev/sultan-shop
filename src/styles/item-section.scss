@@ -68,11 +68,17 @@
     display: flex;
     margin-bottom: 20px;
 
+    .item-price {
+      width: 180px;
+    }
+
+    .quantity-control {
+      margin-right: 38px;
+    }
+
     form {
       display: flex;
       align-items: center;
-
-      gap: 40px;
     }
   }
 

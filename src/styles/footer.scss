@@ -1,329 +1,317 @@
 .footer {
-    padding-top: 71px;
-    height: 500px;
-    color: $white;
-    background: $cello;
+  padding-top: 71px;
+  height: 500px;
+  color: $white;
+  background: $cello;
 
-    &-content {
-        display: flex;
-        justify-content: space-between;
+  &-content {
+    display: flex;
+    justify-content: space-between;
 
-        width: 100%;
+    width: 100%;
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font: 600 20px/150% 'Inter', sans-serif;
     }
-
-    &-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        h3 {
-            margin-top: 0;
-            margin-bottom: 25px;
-            font: 600 20px/150% "Inter", sans-serif;
-        }
-    }
-
+  }
 }
 
 .sultan {
-    &-logo {
-        height: 66px;
-        width: 156px;
-    }
+  &-logo {
+    height: 66px;
+    width: 156px;
+  }
 }
 .menu {
-    &-1 {
-        font: 400 16px/150% "Inter", sans-serif;
+  &-1 {
+    font: 400 16px/150% 'Inter', sans-serif;
 
-        p {
-            margin-bottom: 45px;
-        }
-
-        span {
-            margin-bottom: 14px;
-            font-size: 12px;
-        }
+    p {
+      margin-bottom: 45px;
     }
 
-    &-4 {
-        span {
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 150%;
-        }
+    span {
+      margin-bottom: 14px;
+      font-size: 12px;
     }
+  }
 
-} 
-
-
+  &-4 {
+    span {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+}
 
 .email {
-    position: relative;
+  position: relative;
 
-    &-field {
-        height: 59px;
-        width: 282px;
-    
-        box-sizing: border-box;
-    
-        padding-left: 20px;
-    
-        border: none;
-        border-radius: 36px;
-    
-        background: $white;
-    }
+  &-field {
+    height: 59px;
+    width: 282px;
 
-    &-search {
-        &-icon {
-            position: absolute;
-            top: 18%;
-            right: 12%;
-        
-            width: 39px;
-            height: 39px;
-        }
+    box-sizing: border-box;
+
+    padding-left: 20px;
+
+    border: none;
+    border-radius: 36px;
+
+    background: $white;
+  }
+
+  &-search {
+    &-icon {
+      position: absolute;
+      top: 18%;
+      right: 12%;
+
+      width: 39px;
+      height: 39px;
     }
+  }
 }
 
 .nav {
-    &-bottom {
-        margin-bottom: 20px;
-    
-        a {
-            color: $white;
-            font-size: 14px;
-            line-height: 150%;
-        }
+  &-bottom {
+    margin-bottom: 20px;
 
-
-        ul {
-            margin: 0;
-            padding: 0;
-        }
+    a {
+      color: $white;
+      font-size: 14px;
+      line-height: 150%;
     }
 
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 .btn {
-    &-bottom {
-        margin-bottom: 20px;
-        width: 214px;
-
-    }
+  &-bottom {
+    margin-bottom: 20px;
+    width: 214px;
+  }
 }
 
 .social {
-    &-logos {
-        display: flex;
-        gap: 10px;
-    }
+  &-logos {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .contacts {
-    &-bottom {
-        gap: 5px;
-        margin-bottom: 25px;
-        text-align: left;
-        span, a {
-            color: $white !important;
-        }
+  &-bottom {
+    gap: 5px;
+    margin-bottom: 25px;
+    text-align: left;
+    span,
+    a {
+      color: $white !important;
+    }
+  }
 
+  &-mail {
+    margin-bottom: 25px;
+
+    color: $white;
+    p {
+      margin-top: 0;
+      font: 600 14px/130% 'Inter', sans-serif;
     }
 
-    &-mail {
-        margin-bottom: 25px;
-
-        color: $white;
-        p {
-            margin-top: 0;
-            font: 600 14px/130% "Inter", sans-serif;
-        }
-    
-        span {
-            font: 300 12px/130% "Inter", sans-serif;
-        }
+    span {
+      font: 300 12px/130% 'Inter', sans-serif;
     }
+  }
 }
 
 .payment {
-    &-cards {
-        display: flex;
-        gap: 5px;
-
-    }
+  &-cards {
+    display: flex;
+    gap: 5px;
+  }
 }
 
 @media (max-width: 1159px) {
-    .footer {
-        height: auto;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        &-content {
-            display: grid;
-            grid-template-areas: "menu1 menu2 menu3"
-                                    "menu4 menu5 .";
-            align-items: flex-start;
-            justify-items: baseline;
-            row-gap: 15px;
-        }
+  .footer {
+    height: auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    &-content {
+      display: grid;
+      grid-template-areas:
+        'menu1 menu2 menu3'
+        'menu4 menu5 .';
+      align-items: flex-start;
+      justify-items: baseline;
+      row-gap: 15px;
     }
-    .menu {
-        &-1 {
-            grid-area: menu1;
-        }
-        &-2 {
-            grid-area: menu2;
-        }
-        &-3 {
-            grid-area: menu3;
-        }
-        &-4 {
-            grid-area: menu4;
-        }
-        &-5 {
-            grid-area: menu5;
-        }
+  }
+  .menu {
+    &-1 {
+      grid-area: menu1;
     }
+    &-2 {
+      grid-area: menu2;
+    }
+    &-3 {
+      grid-area: menu3;
+    }
+    &-4 {
+      grid-area: menu4;
+    }
+    &-5 {
+      grid-area: menu5;
+    }
+  }
 }
 
 @media (max-width: 859px) {
-    .footer {
-        &-menu {
-            min-width: fit-content;
-
-        }
-        position: relative;
-        padding-top: 0;
-        &-content {
-            grid-template-areas: "menu1 menu1"
-                                "menu2 menu3"
-                                "menu5 menu4";
-            align-items: flex-start;
-            justify-items: baseline;
-            justify-content: initial;
-            column-gap: 0;
-            row-gap: 25px;
-        }
+  .footer {
+    &-menu {
+      min-width: fit-content;
     }
-    .menu {
-        &-1 {
-            justify-self: center;
-            grid-column: 1 / span 2;
-            margin-bottom: 5px;
+    position: relative;
+    padding-top: 0;
+    &-content {
+      grid-template-areas:
+        'menu1 menu1'
+        'menu2 menu3'
+        'menu5 menu4';
+      align-items: flex-start;
+      justify-items: baseline;
+      justify-content: initial;
+      column-gap: 0;
+      row-gap: 25px;
+    }
+  }
+  .menu {
+    &-1 {
+      justify-self: center;
+      grid-column: 1 / span 2;
+      margin-bottom: 5px;
 
-            p {
-                margin-bottom: 15px;
+      p {
+        margin-bottom: 15px;
 
-                br {
-                    display: none;
-                }
-            }
+        br {
+          display: none;
         }
-
-        &-2, &-3 {
-            h3 {
-                margin-bottom: 20px;
-            }
-        }
-        &-4 {
-            align-items: center;
-
-            span {
-                margin-bottom: 17px;
-                margin-left: 27px;
-                
-            }
-        }
+      }
     }
 
+    &-2,
+    &-3 {
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+    &-4 {
+      align-items: center;
 
-    .sultan-logo {
-        margin-top: 16px;
-        height: 41px;
-        width: 97px;
+      span {
+        margin-bottom: 17px;
+        margin-left: 27px;
+      }
+    }
+  }
+
+  .sultan-logo {
+    margin-top: 16px;
+    height: 41px;
+    width: 97px;
+  }
+
+  .email {
+    &-field {
+      width: 100%;
     }
 
-    .email {
-        //display: block;
-        &-field {
-            width: 100%;
-        }
+    &-search {
+      &-icon {
+        right: 3%;
+      }
+    }
+  }
 
-        &-search {
-            &-icon {
-                right: 3%;
-            }
-        }
+  .btn-bottom {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+
+    height: 40px;
+    width: 149px;
+
+    gap: 7px;
+
+    p {
+      font-size: 12px !important;
+      line-height: 15px !important;
     }
 
-    .btn-bottom {
-        position: absolute;
-        top: 16px;
-        right: 15px;
-
-        height: 40px;
-        width: 149px;
-
-        gap: 7px;
-
-        p {
-            font-size: 12px !important;
-            line-height: 15px !important;
-        }
-
-        img {
-            height: 13px;
-            width: 13px;
-        }
+    img {
+      height: 13px;
+      width: 13px;
     }
+  }
 }
 
 @media (max-width: 479px) {
-    .menu {
-        &-1 {
-            p {
-                font-size: 12px;
-            }
-        }
-
-
-        &-4 {
-            margin-top: 50px;
-            h3 {
-                display: none;
-            }
-        }
+  .menu {
+    &-1 {
+      p {
+        font-size: 12px;
+      }
     }
 
-    .nav {
-        &-bottom {
-            margin-bottom: 0;
-        }
+    &-4 {
+      margin-top: 50px;
+      h3 {
+        display: none;
+      }
     }
-    .list {
-        &-item {
-            a {
-                font-size: 12px;
-            }
-        }
-        &-item:last-child {
-            margin-bottom: 0;
-        }
+  }
+
+  .nav {
+    &-bottom {
+      margin-bottom: 0;
+    }
+  }
+  .list {
+    &-item {
+      a {
+        font-size: 12px;
+      }
+    }
+    &-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .contacts {
+    &-mail {
+      margin-bottom: 10px;
+      p {
+        margin-bottom: 0;
+      }
     }
 
-    .contacts {
-        &-mail {
-            margin-bottom: 10px;
-            p {
-                margin-bottom: 0;
-            }
-        }
-
-        &-bottom {
-            width: max-content;
-        }
+    &-bottom {
+      width: max-content;
     }
-
-
+  }
 }

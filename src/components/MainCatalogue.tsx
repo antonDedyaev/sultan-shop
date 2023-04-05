@@ -2,7 +2,11 @@ import { useEffect, FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import { ISingleItem } from '../models/ISingleItem';
-import { loadItems, onAddToCartClick } from '../store/reducers/ActionCreators';
+import {
+  filterByCategory,
+  handleAddToCart,
+  loadItems,
+} from '../store/reducers/ActionCreators';
 import bottleIcon from '../assets/img/bottle.svg';
 import boxIcon from '../assets/img/box.svg';
 import addItem from '../assets/img/add-to-cart.svg';
@@ -10,7 +14,6 @@ import arrowLeft from '../assets/img/arrow-left-cello.svg';
 
 import Filters from './Filters';
 import Pagination from './Pagination';
-import { itemsFiltered } from '../store/reducers/itemsSlice';
 
 const MainCatalogue: FC = () => {
   const dispatch = useAppDispatch();
@@ -44,33 +47,35 @@ const MainCatalogue: FC = () => {
             {element.size} {element.format}
           </span>
         </div>
-        <Link to={`/${element.barcode}`} style={{ textDecoration: 'none' }}>
-          <p>
-            <span>{element.brand}</span> {element.name}
-          </p>
-        </Link>
-
-        <div className="item-data">
-          <ul id="description" className="data-list">
-            <li className="list-unmarked">
-              Штрихкод: <span>{element.barcode}</span>
-            </li>
-            <li className="list-unmarked">
-              Производитель: <span>{element.manufacturer}</span>
-            </li>
-            <li className="list-unmarked">
-              Бренд: <span>{element.brand}</span>
-            </li>
-            <li className="list-unmarked">
-              Тип ухода: <span>{element.care}</span>
-            </li>
-          </ul>
+        <div className="item-main-info">
+          <Link to={`/${element.barcode}`} style={{ textDecoration: 'none' }}>
+            <p>
+              <span>{element.brand}</span> {element.name}
+            </p>
+          </Link>
+          <div className="item-data">
+            <ul id="description" className="data-list">
+              <li className="list-unmarked">
+                Штрихкод: <span>{element.barcode}</span>
+              </li>
+              <li className="list-unmarked">
+                Производитель: <span>{element.manufacturer}</span>
+              </li>
+              <li className="list-unmarked">
+                Бренд: <span>{element.brand}</span>
+              </li>
+              <li className="list-unmarked">
+                Тип ухода: <span>{element.care}</span>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div className="item-cost">
           <span>{element.price.toFixed(2)} ₽</span>
           <div
             className="btn btn-cart"
-            onClick={() => onAddToCartClick(element, dispatch)}
+            onClick={() => handleAddToCart(element, dispatch)}
           >
             <p>В КОРЗИНУ</p>
             <img src={addItem} alt="Логотип корзины" />
@@ -116,26 +121,16 @@ const MainCatalogue: FC = () => {
 
   const careCategories = useAppSelector((state) => state.items.typesOfCare);
 
-  const handleCategoryFilter = ({
-    currentTarget,
-  }: React.MouseEvent<HTMLDivElement>) => {
-    const id = currentTarget.dataset.id;
-    const matched = document.querySelectorAll(`div[data-id=${id}]`);
-    matched.forEach((item) => item.classList.toggle('activated'));
-    const activeCareTypes = document.querySelectorAll('.activated');
-    const uniqueCareTypes = new Set();
-    activeCareTypes.forEach((type) => uniqueCareTypes.add(type.textContent));
-    const filtered = itemsToRender.filter(
-      (item) => item.care && [...uniqueCareTypes].join('/').includes(item.care),
-    );
-    dispatch(itemsFiltered(filtered));
-  };
-
   const renderTopFilter = () => {
     return (
-      <div className="filter-top-grid" onClick={handleCategoryFilter}>
+      <div className="filter-top-grid">
         {careCategories.map((category, index) => (
-          <div className="grid-el" key={index} data-id={category.identifier}>
+          <div
+            className="grid-el"
+            key={index}
+            data-id={category.identifier}
+            onClick={(e) => filterByCategory(e, itemsToRender, dispatch)}
+          >
             {category.type}
           </div>
         ))}
