@@ -6,7 +6,7 @@ There is an admin mode (activated via small button placed on the top right corne
 
 ## Check the deployed app at:
 
-antondedyaev.github.io/sultan-shop/
+https://antondedyaev.github.io/sultan-shop/
 
 ## Install and use:
 
