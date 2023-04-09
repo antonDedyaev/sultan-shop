@@ -16,7 +16,6 @@ const AdminEditCard: FC = () => {
   const allItems = useAppSelector((state) => state.items.items);
 
   useEffect(() => {
-    console.log('fetchedItems:', allItems);
     localStorage.setItem('items', JSON.stringify(allItems));
   }, [allItems, dispatch]);
 
@@ -52,7 +51,6 @@ const AdminEditCard: FC = () => {
         clone[key] = careValue.slice(1);
         continue;
       }
-      console.log(typeof key);
       clone[key] =
         typeof selectedCard[key as keyof ISingleItem] === 'number'
           ? Number(value)
@@ -70,7 +68,7 @@ const AdminEditCard: FC = () => {
   };
 
   return (
-    <div className="card-edit-page">
+    <div className="card-edit-page" data-testid="edit-card">
       <div className="admin-header">
         <h1>Редактирование товара</h1>
         <Link to="/" className="btn-to-main link-plain">
@@ -82,7 +80,13 @@ const AdminEditCard: FC = () => {
           <span>На страницу администрирования</span>
         </Link>
       </div>
-      <form id="card-form" action="" name="item-card" onSubmit={handleSaveData}>
+      <form
+        id="card-form"
+        data-testid="new-card"
+        action=""
+        name="item-card"
+        onSubmit={handleSaveData}
+      >
         <div className="card-data">
           <div className="card-form-labels">
             <label htmlFor="item-id">ID:</label>
@@ -108,55 +112,55 @@ const AdminEditCard: FC = () => {
               type="text"
               name="image"
               id="item-img"
-              defaultValue={String(selectedCard?.image)}
+              defaultValue={String(selectedCard.image)}
             />
             <input
               type="text"
               name="name"
               id="item-name"
-              defaultValue={String(selectedCard?.name)}
+              defaultValue={String(selectedCard.name)}
             />
             <input
               type="text"
               name="format"
               id="item-size-format"
-              defaultValue={String(selectedCard?.format)}
+              defaultValue={String(selectedCard.format)}
             />
             <input
               type="number"
               name="size"
               id="item-size"
-              defaultValue={String(selectedCard?.size)}
+              defaultValue={String(selectedCard.size)}
             />
             <input
               type="number"
               name="barcode"
               id="item-barcode"
-              defaultValue={String(selectedCard?.barcode)}
+              defaultValue={String(selectedCard.barcode)}
             />
             <input
               type="text"
               name="manufacturer"
               id="item-manufacturer"
-              defaultValue={String(selectedCard?.manufacturer)}
+              defaultValue={String(selectedCard.manufacturer)}
             />
             <input
               type="text"
               name="brand"
               id="item-brand"
-              defaultValue={String(selectedCard?.brand)}
+              defaultValue={String(selectedCard.brand)}
             />
             <input
               type="text"
               name="description"
               id="item-description"
-              defaultValue={String(selectedCard?.description)}
+              defaultValue={String(selectedCard.description)}
             />
             <input
               type="number"
               name="price"
               id="item-price"
-              defaultValue={String(selectedCard?.price)}
+              defaultValue={String(selectedCard.price)}
             />
             <select name="care" id="care-type" onFocus={handleSelectedOptions}>
               <option value="Уход за телом">Уход за телом</option>

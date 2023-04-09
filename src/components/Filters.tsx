@@ -43,7 +43,6 @@ const Filters: FC = () => {
       return item.price > minPrice && item.price < maxPrice;
     });
     setPriceFilter(filteredByPrice);
-    //setManufacturerFilter([...new Set([...manufacturerFilter, ...filteredByPrice])]);
   };
 
   const handleCheckBoxFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -91,8 +90,9 @@ const Filters: FC = () => {
       <li className="list-unmarked" key={value}>
         <input
           type="checkbox"
+          role="checkbox"
           value={value}
-          id={String(index)}
+          id={value}
           onChange={handleCheckBoxFilter}
         />
         <label htmlFor={String(index)}>{value}</label>
@@ -111,6 +111,7 @@ const Filters: FC = () => {
             className="list-el"
             key={index}
             data-id={category.identifier}
+            role="care-filter"
             onClick={(e) => filterByCategory(e, items, dispatch)}
           >
             {category.type}

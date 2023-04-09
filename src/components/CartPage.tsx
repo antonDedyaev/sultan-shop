@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { FC, useEffect, useState } from 'react';
 import wasteBin from '../assets/img/waste-bin.svg';
 import bottleIcon from '../assets/img/bottle.svg';
@@ -20,14 +21,6 @@ const CartPage: FC = () => {
   const [active, setActive] = useState(false);
 
   const cartItems = useAppSelector((state) => state.cart.addedItems);
-  if (cartItems.length !== 0)
-    localStorage.setItem('cartItem', JSON.stringify(cartItems));
-
-  const [cart, setCart] = useState(cartItems);
-
-  useEffect(() => {
-    localStorage.setItem('cartItem', JSON.stringify(cartItems));
-  }, [cart]);
 
   const totalSum = cartItems.reduce((acc, currentItem) => {
     return acc + currentItem.price * currentItem.addedAmount;
@@ -35,7 +28,7 @@ const CartPage: FC = () => {
 
   useEffect(() => {
     dispatch(totalSumCounted(totalSum));
-  }, [dispatch, totalSum]);
+  }, [totalSum, cartItems]);
 
   const handleSubtractItem = (id: number, addedAmount: number) => {
     if (addedAmount === 0) {
@@ -50,8 +43,8 @@ const CartPage: FC = () => {
   };
 
   const handleDeleteItem = (id: number) => {
-    const filteredItems = cartItems.filter((item) => item.id !== id);
-    dispatch(itemDeletedFromCart(filteredItems));
+    const itemsLeftInCart = cartItems.filter((item) => item.id !== id);
+    dispatch(itemDeletedFromCart(itemsLeftInCart));
   };
 
   const handleProcessOrder = () => {
@@ -59,6 +52,7 @@ const CartPage: FC = () => {
       return;
     }
     setActive(true);
+    localStorage.removeItem('cartItems');
     dispatch(itemDeletedFromCart([]));
   };
 
@@ -138,7 +132,11 @@ const CartPage: FC = () => {
             {cartItems.map((item, index) => renderCartContent(item, index))}
           </div>
           <div className="order-process">
-            <div className="btn btn-process" onClick={handleProcessOrder}>
+            <div
+              className="btn btn-process"
+              onClick={handleProcessOrder}
+              role="button"
+            >
               <p>Оформить заказ</p>
             </div>
             <span className="item-price sum">{totalSum.toFixed(2)} ₽</span>

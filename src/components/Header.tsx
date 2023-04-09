@@ -11,6 +11,7 @@ import menu from '../assets/img/menu.svg';
 import menuClose from '../assets/img/menu-cross.svg';
 import magnifyingGlass from '../assets/img/magn-glass.svg';
 import verticalLine from '../assets/img/vertical-line.svg';
+import adminLogo from '../assets/img/admin-svgrepo-com.svg';
 import ModalMenu from './ModalMenu';
 
 const Header: FC = () => {
@@ -85,6 +86,9 @@ const Header: FC = () => {
       <hr />
       <div className="container">
         <nav className="header-nav-bottom">
+          <Link to="/admin" className="admin-link link-plain">
+            <img src={adminLogo} alt="Логотип режима администрирования" />
+          </Link>
           <img
             src={menu}
             alt="Меню"
@@ -175,10 +179,6 @@ const Header: FC = () => {
               <span>Корзина</span>
               <span>{Number(cartAmount).toFixed(2)} ₽</span>
             </div>
-          </Link>
-          <Link to="/admin" className="admin-link link-plain">
-            <span>Режим</span>
-            <span>админа</span>
           </Link>
         </nav>
       </div>

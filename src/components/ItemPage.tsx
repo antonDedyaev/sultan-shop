@@ -62,7 +62,7 @@ const ItemPage: FC = () => {
   };
 
   return selectedItem ? (
-    <div className="item-page">
+    <div className="item-page" data-testid="item-details-page">
       <div className="container">
         <div className="itempage-content">
           <div className="breadcrumbs-nav-wrapper">

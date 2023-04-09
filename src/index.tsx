@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
-import store from './store/store';
+import { createReduxStore } from './store/store';
 
 //localStorage.clear();
 
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <Provider store={store}>
+  <Provider store={createReduxStore()}>
     <App />
   </Provider>,
 );

@@ -34,7 +34,7 @@ const MainCatalogue: FC = () => {
 
   const renderItem = (element: ISingleItem) => {
     return (
-      <div key={element.id} className="item-card">
+      <div key={element.id} className="item-card" data-testid="loaded-item">
         <div className="item-card-img">
           <img src={element.image} alt="Изображение товара" />
         </div>
@@ -48,7 +48,11 @@ const MainCatalogue: FC = () => {
           </span>
         </div>
         <div className="item-main-info">
-          <Link to={`/${element.barcode}`} style={{ textDecoration: 'none' }}>
+          <Link
+            to={`/${element.barcode}`}
+            style={{ textDecoration: 'none' }}
+            data-testid="item-link"
+          >
             <p>
               <span>{element.brand}</span> {element.name}
             </p>
@@ -59,7 +63,8 @@ const MainCatalogue: FC = () => {
                 Штрихкод: <span>{element.barcode}</span>
               </li>
               <li className="list-unmarked">
-                Производитель: <span>{element.manufacturer}</span>
+                Производитель:{' '}
+                <span role="manufacturer">{element.manufacturer}</span>
               </li>
               <li className="list-unmarked">
                 Бренд: <span>{element.brand}</span>
@@ -75,6 +80,7 @@ const MainCatalogue: FC = () => {
           <span>{element.price.toFixed(2)} ₽</span>
           <div
             className="btn btn-cart"
+            data-testid="add-to-cart"
             onClick={() => handleAddToCart(element, dispatch)}
           >
             <p>В КОРЗИНУ</p>

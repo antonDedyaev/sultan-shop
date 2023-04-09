@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { ISingleItem } from '../../models/ISingleItem';
 import { loadItems } from '../../store/reducers/ActionCreators';
+import bottleIcon from '../../assets/img/bottle.svg';
+import boxIcon from '../../assets/img/box.svg';
 import deleteCard from '../../assets/img/close-md-svgrepo-com.svg';
 import editCard from '../../assets/img/edit-svgrepo-com.svg';
 import addCard from '../../assets/img/add-plus-square-svgrepo-com.svg';
@@ -29,10 +31,15 @@ const AdminList: FC = () => {
 
   const renderItemList = (item: ISingleItem) => {
     return (
-      <div key={item.id} className="item-card relative">
+      <div
+        key={item.id}
+        data-testid="admin-card"
+        className="item-card relative"
+      >
         <div
           className="card-remove"
           id={String(item.id)}
+          data-testid="remove-card"
           onClick={handleRemoveItem}
         >
           <img src={deleteCard} alt="Кнопка удаления" />
@@ -44,32 +51,38 @@ const AdminList: FC = () => {
           <img src={item.image} alt="Изображение товара" />
         </div>
         <div className="item-weight">
+          <img
+            src={item.format === 'мл' ? bottleIcon : boxIcon}
+            alt="Логотип бутылки или коробки"
+          />
           <span>
             {item.size} {item.format}
           </span>
         </div>
-        <Link to={`/${item.barcode}`} style={{ textDecoration: 'none' }}>
-          <p>
-            <span>{item.brand}</span> {item.name}
-          </p>
-        </Link>
-
-        <div className="item-data">
-          <ul id="description" className="data-list">
-            <li className="list-unmarked">
-              Штрихкод: <span>{item.barcode}</span>
-            </li>
-            <li className="list-unmarked">
-              Производитель: <span>{item.manufacturer}</span>
-            </li>
-            <li className="list-unmarked">
-              Бренд: <span>{item.brand}</span>
-            </li>
-            <li className="list-unmarked">
-              Тип ухода: <span>{item.care}</span>
-            </li>
-          </ul>
+        <div className="item-main-info">
+          <Link to={`/${item.barcode}`} style={{ textDecoration: 'none' }}>
+            <p>
+              <span>{item.brand}</span> {item.name}
+            </p>
+          </Link>
+          <div className="item-data">
+            <ul id="description" className="data-list">
+              <li className="list-unmarked">
+                Штрихкод: <span>{item.barcode}</span>
+              </li>
+              <li className="list-unmarked">
+                Производитель: <span>{item.manufacturer}</span>
+              </li>
+              <li className="list-unmarked">
+                Бренд: <span>{item.brand}</span>
+              </li>
+              <li className="list-unmarked">
+                Тип ухода: <span>{item.care}</span>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div className="item-cost">
           <span>{item.price.toFixed(2)} ₽</span>
         </div>
@@ -90,7 +103,7 @@ const AdminList: FC = () => {
         <div className="admin-page-grid">
           {allItems.map((item) => renderItemList(item))}
           <div className="item-card card-add empty">
-            <Link to="edit/new">
+            <Link to="/admin/edit/new" data-testid="add-new-card">
               <img src={addCard} alt="Картинка добавления" />
             </Link>
           </div>
