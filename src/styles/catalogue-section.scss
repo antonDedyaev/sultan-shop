@@ -256,10 +256,6 @@
   }
 }
 
-.list-el {
-  cursor: pointer;
-}
-
 #price-filter {
   display: flex;
   margin-top: 16px;
@@ -294,7 +290,14 @@
 
 .list-el {
   width: fit-content;
+
   border-radius: 10px;
+
+  cursor: pointer;
+
+  &.activated {
+    padding: 2px 5px;
+  }
 }
 
 .manufacturer {

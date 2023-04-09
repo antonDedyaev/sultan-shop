@@ -1,120 +1,142 @@
 .admin {
-    margin: 50px 50px;
+  margin: 50px 50px;
 
-    &-header {
-        margin-left: 200px;
+  &-header {
+    margin-left: 200px;
 
-        h1 {
-            text-align: center;
-        }
-
+    h1 {
+      text-align: center;
     }
-    &-page {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  }
+  &-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        margin: 15px;
-        &-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
+    margin: 15px;
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
     }
+  }
 }
 
 .card {
-    &-remove {
-        display: flex;
-        position: absolute;
-        top: 20px;
-        right: 20px;
+  &-remove {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
-        cursor: pointer;
-    }
+    cursor: pointer;
+  }
 
-    &-edit {
-        display: flex;
-        position: absolute;
-        top: 20px;
-        left: 20px;
+  &-edit {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 
-        cursor: pointer;
-    }
+    cursor: pointer;
+  }
 
-    &-add {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: lightblue;
-    }
-    &-add.empty {
-        height: 490px;
-        width: 326px;
-    }
+  &-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightblue;
+  }
+  &-add.empty {
+    height: 490px;
+    width: 326px;
+  }
 }
 
 .btn {
-    &-to-main {
-        margin-top: 35px;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 15px;
+  &-to-main {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
 
-        span {
-            font-weight: 500;
-            font-size: 25px;
-            line-height: 150%;
+    span {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 150%;
 
-            color: $cello;
-        }
+      color: $cello;
     }
+  }
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 @media (max-width: 1269px) {
-    .admin {
-        &-header {
-            margin-left: 0;
-    
-            h1 {
-                text-align: center;
-            }
-    
-        }
-        &-page {
-            &-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-        }
-    }
+  .admin {
+    &-header {
+      margin-left: 0;
 
-} 
+      h1 {
+        text-align: center;
+      }
+    }
+    &-page {
+      &-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+    }
+  }
+}
 
 @media (max-width: 769px) {
-    .admin {
-        &-header {
-            margin-left: 0;
+  .admin {
+    &-header {
+      margin-left: 0;
 
-            h1 {
-                text-align: left;
-            }
-
-        }
-
-        &-page {
-            &-grid {
-                grid-template-columns: repeat(1, 1fr);
-                gap: 15px;
-            }
-        }
+      h1 {
+        text-align: left;
+      }
     }
 
+    &-page {
+      &-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 469px) {
+  .admin {
+    &-header {
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    &-page {
+      &-grid {
+        .item-card {
+          margin: 0;
+          max-width: 280px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    &-to-main {
+      span {
+        font-size: 20px;
+      }
+    }
+  }
 }
