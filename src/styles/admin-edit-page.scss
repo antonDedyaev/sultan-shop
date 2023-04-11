@@ -92,3 +92,25 @@
     }
   }
 }
+
+@media (max-width: 489px) {
+  .card {
+    &-edit {
+      &-page {
+        margin: 10px;
+      }
+    }
+
+    &-form {
+      &-inputs {
+        input,
+        select {
+          font-size: 14px;
+        }
+      }
+      &-labels {
+        font-size: 14px;
+      }
+    }
+  }
+}

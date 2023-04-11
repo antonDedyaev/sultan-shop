@@ -48,7 +48,7 @@ const CartPage: FC = () => {
   };
 
   const handleProcessOrder = () => {
-    if (cartItems.length === 0) {
+    if (cartItems.length === 0 || totalSum === 0) {
       return;
     }
     setActive(true);
