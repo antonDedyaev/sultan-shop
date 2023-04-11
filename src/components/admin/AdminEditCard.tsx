@@ -67,6 +67,12 @@ const AdminEditCard: FC = () => {
     currentTarget.size = 11;
   };
 
+  const handleHideSelect = ({
+    currentTarget,
+  }: React.FocusEvent<HTMLSelectElement>) => {
+    currentTarget.size = 1;
+  };
+
   return (
     <div className="card-edit-page" data-testid="edit-card">
       <div className="admin-header">
@@ -162,7 +168,12 @@ const AdminEditCard: FC = () => {
               id="item-price"
               defaultValue={String(selectedCard.price)}
             />
-            <select name="care" id="care-type" onFocus={handleSelectedOptions}>
+            <select
+              name="care"
+              id="care-type"
+              onFocus={handleSelectedOptions}
+              onBlur={handleHideSelect}
+            >
               <option value="Уход за телом">Уход за телом</option>
               <option value="Уход за руками">Уход за руками</option>
               <option value="Уход за ногами">Уход за ногами</option>
