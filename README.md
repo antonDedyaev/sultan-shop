@@ -32,4 +32,5 @@ npm start
 
 - Typescript
 - React / Redux / Redux-toolkit
+- React testing library
 - GitHub Pages
